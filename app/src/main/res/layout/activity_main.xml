@@ -42,28 +42,29 @@
         android:textColorHint="#000000"
 
         />
-    <TextView
-        android:id="@+id/Scoop"
-        android:layout_below="@id/password"
+
+    <Button
+        android:id="@+id/scoop"
         android:layout_width="175dp"
         android:layout_height="40dp"
-        android:padding="5dp"
-        android:hint="Let's Scoop"
-        android:textColorHint="#FDF7F7"
-        android:textStyle="bold"
-
+        android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:inputType="textPersonName"
-        android:gravity="center"
-        android:textColor="#F6E7EC"
         android:background="@drawable/round_pink_bg"
+        android:gravity="center"
+
+        android:hint="Let's Scoop"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#F6E7EC"
+        android:textColorHint="#FDF7F7"
+        android:textStyle="bold"
 
         />
 
     <TextView
         android:id="@+id/forget"
-        android:layout_below="@id/Scoop"
+        android:layout_below="@id/scoop"
         android:layout_width="175dp"
         android:layout_height="40dp"
         android:padding="5dp"

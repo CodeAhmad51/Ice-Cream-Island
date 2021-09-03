@@ -112,7 +112,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#80444444">
+                    android:background="#80D85454">
 
 
                     <ImageView
@@ -192,7 +192,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#80444444">
+                    android:background="#80D85454">
 
 
                     <ImageView
@@ -272,7 +272,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#80444444">
+                    android:background="#80D85454">
 
 
                     <ImageView
@@ -353,7 +353,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#80444444">
+                    android:background="#80D85454">
 
 
                     <ImageView

@@ -22,6 +22,7 @@ public class HomePage extends AppCompatActivity {
         iceCream_price_3 = findViewById(R.id.icecream_price_3);
 
         qnt_1 = findViewById(R.id.qnt_1);
+
         qnt_2 = findViewById(R.id.qnt_2);
         qnt_3 = findViewById(R.id.qnt_3);
 

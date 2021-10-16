@@ -75,14 +75,14 @@
                             android:background="@drawable/ic_add_24" />
 
                         <TextView
+                            android:id="@+id/qnt_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"
                             android:layout_below="@id/icecream_price_1"
                             android:layout_marginLeft="188dp"
                             android:layout_marginTop="25dp"
-                            android:textColor="#ffffff"
-                            />
+                            android:text="1"
+                            android:textColor="#ffffff" />
 
                         <ImageView
                             android:id="@+id/icecream_remove_1"
@@ -93,6 +93,17 @@
                             android:layout_marginTop="20dp"
                             android:layout_toRightOf="@id/icecream_img_1"
                             android:background="@drawable/ic__remove_24" />
+
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@id/icecream_price_1"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@id/icecream_remove_1"
+                            android:background="@drawable/round_pink_bg"
+                            android:text="order"
+                            android:textStyle="bold" />
 
 
 
@@ -155,14 +166,14 @@
                         android:background="@drawable/ic_add_24" />
 
                     <TextView
+                        android:id="@+id/qnt_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:layout_below="@id/icecream_price_2"
                         android:layout_marginLeft="188dp"
                         android:layout_marginTop="25dp"
-                        android:textColor="#ffffff"
-                        />
+                        android:text="1"
+                        android:textColor="#ffffff" />
 
                     <ImageView
                         android:id="@+id/icecream_remove_2"
@@ -173,6 +184,17 @@
                         android:layout_marginTop="20dp"
                         android:layout_toRightOf="@id/icecream_img_2"
                         android:background="@drawable/ic__remove_24" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/icecream_price_2"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/icecream_remove_2"
+                        android:background="@drawable/round_pink_bg"
+                        android:text="order"
+                        android:textStyle="bold" />
 
 
 
@@ -235,14 +257,14 @@
                         android:background="@drawable/ic_add_24" />
 
                     <TextView
+                        android:id="@+id/qnt_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:layout_below="@id/icecream_price_3"
                         android:layout_marginLeft="188dp"
                         android:layout_marginTop="25dp"
-                        android:textColor="#ffffff"
-                        />
+                        android:text="1"
+                        android:textColor="#ffffff" />
 
                     <ImageView
                         android:id="@+id/icecream_remove_3"
@@ -253,6 +275,17 @@
                         android:layout_marginTop="20dp"
                         android:layout_toRightOf="@id/icecream_img_3"
                         android:background="@drawable/ic__remove_24" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/icecream_price_3"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/icecream_remove_3"
+                        android:background="@drawable/round_pink_bg"
+                        android:text="order"
+                        android:textStyle="bold" />
 
 
 
@@ -334,6 +367,17 @@
                         android:layout_toRightOf="@id/icecream_img_4"
                         android:background="@drawable/ic__remove_24" />
 
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/icecream_price_4"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/icecream_remove_4"
+                        android:background="@drawable/round_pink_bg"
+                        android:text="order"
+                        android:textStyle="bold" />
+
 
 
                 </RelativeLayout>
@@ -413,11 +457,20 @@
                         android:layout_below="@id/icecream_price_5"
                         android:layout_marginLeft="110dp"
                         android:layout_marginTop="20dp"
-                        android:layout_toRightOf="@id/icecream_img_5"
-                        android:background="@drawable/ic__remove_24"
                         android:layout_marginBottom="10dp"
-                        />
+                        android:layout_toRightOf="@id/icecream_img_5"
+                        android:background="@drawable/ic__remove_24" />
 
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/icecream_price_5"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/icecream_remove_5"
+                        android:background="@drawable/round_pink_bg"
+                        android:text="order"
+                        android:textStyle="bold" />
 
 
                 </RelativeLayout>

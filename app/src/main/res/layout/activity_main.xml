@@ -18,10 +18,11 @@
 
         android:gravity="center"
         android:hint="User Name"
+        android:textStyle="italic"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:textColor="#190101"
-        android:textColorHint="#000000"
+        android:textColorHint="#A38E8E"
 
         />
 
@@ -36,10 +37,11 @@
 
         android:gravity="center"
         android:hint="password"
+        android:textStyle="italic"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:textColor="#190101"
-        android:textColorHint="#000000"
+        android:textColorHint="#B8A6A6"
 
         />
 
@@ -62,6 +64,7 @@
 
         />
 
+
     <TextView
         android:id="@+id/forget_password"
         android:layout_width="175dp"
@@ -69,7 +72,6 @@
         android:layout_below="@id/scoop"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:background="#00000000"
         android:gravity="center"
 
         android:hint="Forget Password ?"

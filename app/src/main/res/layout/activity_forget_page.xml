@@ -19,11 +19,10 @@
         android:id="@+id/forget_pas_name"
         android:layout_width="175dp"
         android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="404dp"
         android:background="@drawable/round_bg"
         android:textStyle="normal"
-        />
 
         android:gravity="center"
         android:hint="email or phone number"
@@ -31,7 +30,6 @@
         android:padding="5dp"
         android:textColor="#190101"
         android:textColorHint="#000000"
-
         />
     <Button
         android:id="@+id/scoop"

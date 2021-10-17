@@ -3,18 +3,21 @@
 
 
     <item
+        android:id="@+id/bottom_profile_icon"
+        android:title="profile"
+        android:icon="@drawable/profile_photo"
+        />
+
+    <item
+        android:id="@+id/bottom_home_icon"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+
+    <item
         android:id="@+id/bottom_setting_icon"
         android:title="setting"
         android:icon="@drawable/ic_baseline_settings_24"
         />
-    <item
-        android:id="@+id/bottom_home_icon"
-        android:title="Home"
-        android:icon="@drawable/ic_baseline_home_24"/>
 
-    <item
-        android:id="@+id/bottom_cart_icon"
-        android:title="My_cart"
-        android:icon="@drawable/add_shopping_cart_24"
-        />
 </menu>

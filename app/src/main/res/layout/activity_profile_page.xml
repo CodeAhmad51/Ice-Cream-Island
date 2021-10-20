@@ -7,93 +7,100 @@
     android:orientation="vertical"
     tools:context=".ProfilePage">
 
-    <ImageView
-        android:id="@+id/profile_image_frame"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/profile_photo"
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile_image_frame"
-        android:layout_centerHorizontal="true"
-        android:text="changePhoto"
-        android:textSize="24dp" />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/profile_image_frame">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile_image_frame"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/profile_photo" />
 
         <TextView
-            android:id="@+id/username_textView"
             android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="15dp"
-            android:text="Username"
-            android:textSize="30dp"
-            android:textStyle="italic|bold" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image_frame"
+            android:layout_centerHorizontal="true"
+            android:text="changePhoto"
+            android:textSize="24dp" />
 
-        <EditText
-            android:id="@+id/username_profilePage"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="UserName"
-            android:layout_below="@id/username_textView"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image_frame"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/password_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_below="@id/username_profilePage"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:text="password"
-            android:textSize="30dp"
-            android:textStyle="italic|bold" />
+            <TextView
+                android:id="@+id/username_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:text="Username"
+                android:textSize="30dp"
+                android:textStyle="italic|bold" />
 
-        <EditText
-            android:id="@+id/password_profilePage"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/password_textView"
-            android:hint="Password"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/username_profilePage"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/username_textView"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:hint="UserName" />
 
-        <TextView
-            android:id="@+id/Email_ProfilePage"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_below="@id/password_profilePage"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:text="Email id"
-            android:textSize="30dp"
-            android:textStyle="italic|bold" />
+            <TextView
+                android:id="@+id/password_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_below="@id/username_profilePage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="password"
+                android:textSize="30dp"
+                android:textStyle="italic|bold" />
 
-        <EditText
-            android:id="@+id/Email_editText"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/Email_ProfilePage"
-            android:hint="email"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:inputType="textEmailAddress" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/password_profilePage"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/password_textView"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/Email_ProfilePage"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_below="@id/password_profilePage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Email id"
+                android:textSize="30dp"
+                android:textStyle="italic|bold" />
+
+            <EditText
+                android:id="@+id/Email_editText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/Email_ProfilePage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:hint="email"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_bar"

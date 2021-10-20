@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IceCreamIsland">
         <activity
+            android:name=".setting_page"
+            android:exported="false" />
+        <activity
             android:name=".ProfilePage"
             android:exported="false" />
         <activity

@@ -4,36 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class ProfilePage extends AppCompatActivity {
+public class setting_page extends AppCompatActivity {
 
-    EditText username_profilePage, password_ProfilePage , email_profile;
     BottomNavigationView bottomBar;
-
-    SharedPreferences sharedPreferences_profile;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
-        username_profilePage = findViewById(R.id.username_profilePage);
-        password_ProfilePage = findViewById(R.id.password_profilePage);
-        email_profile = findViewById(R.id.Email_editText);
-
-
-        sharedPreferences_profile = getSharedPreferences("username_dataBase",MODE_PRIVATE);
-
-        username_profilePage.setText(getUsername("username_key"));
-        password_ProfilePage.setText(getPassword("password_key"));
-        email_profile.setText(getEmail("email_key"));
+        setContentView(R.layout.activity_setting_page);
 
         bottomBar.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
             @Override
@@ -60,25 +44,5 @@ public class ProfilePage extends AppCompatActivity {
                 }
             }
         });
-
-
     }
-
-
-    String getUsername(String key){
-        String s;
-        s = sharedPreferences_profile.getString(key," ");
-        return s ;
-    }
-    String getPassword(String key){
-        String password;
-        password = sharedPreferences_profile.getString(key," ");
-        return password ;
-    }
-    String getEmail(String key){
-        String email;
-        email=sharedPreferences_profile.getString(key," ");
-        return email;
-    }
-
 }

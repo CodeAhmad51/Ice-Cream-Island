@@ -68,13 +68,15 @@
                     android:textSize="35dp"
                     android:textStyle="italic|bold" />
 
-                <ImageView
+                <ToggleButton
                     android:id="@+id/heart_fav"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="115dp"
+                    android:layout_marginTop="125dp"
                     android:layout_marginRight="20dp"
+                    android:textOff=" "
+                    android:textOn=" "
                     android:src="@drawable/not_favorite_24" />
 
 

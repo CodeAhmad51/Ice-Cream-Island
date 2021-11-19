@@ -1,11 +1,14 @@
 package com.example.icecreamisland;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class HomePage extends AppCompatActivity {
 
@@ -13,7 +16,7 @@ public class HomePage extends AppCompatActivity {
     ImageView iceCream_price_remove_1 , iceCream_price_remove_2, iceCream_price_remove_3 ,iceCream_price_remove_4, iceCream_price_remove_5;
     ImageView iceCream_price_add_1 , iceCream_price_add_2, iceCream_price_add_3 , iceCream_price_add_4, iceCream_price_add_5;
 
-    ImageView heart_fav;
+    ToggleButton heart_fav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,10 @@ public class HomePage extends AppCompatActivity {
         iceCream_price_5 = findViewById(R.id.icecream_price_5);
 
         heart_fav = findViewById(R.id.heart_fav);
+
+
+        heart_fav.setChecked(false);
+        heart_fav.setBackgroundDrawable(ContextCompat.getDrawable(heart_fav.getContext(), R.drawable.not_favorite_24));
 
         qnt_1 = findViewById(R.id.qnt_1);
         qnt_2 = findViewById(R.id.qnt_2);
@@ -252,10 +259,16 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        heart_fav.setOnClickListener(new View.OnClickListener() {
+        heart_fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                heart_fav.setImageResource(R.drawable.favorite_pink_24);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    heart_fav.setBackgroundDrawable(ContextCompat.getDrawable(heart_fav.getContext(),R.drawable.favorite_pink_24));
+                }
+
+                    else{
+                    heart_fav.setBackgroundDrawable(ContextCompat.getDrawable(heart_fav.getContext(), R.drawable.not_favorite_24));
+                }
             }
         });
 

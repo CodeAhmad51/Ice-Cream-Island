@@ -1,6 +1,8 @@
 package com.example.icecreamisland;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,11 +15,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button scoop;
+    Button scoop ;
     EditText username , password ;
     TextView forget_password;
+    TableDataBase myDataBase;
 
-    SharedPreferences sharedPreferences_username , sharedPreferences_paassword;
+    SharedPreferences sharedPreferences_credentials ;
 
 
     @Override
@@ -30,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         scoop = findViewById(R.id.scoop);
         forget_password = findViewById(R.id.forget_password);
 
-        sharedPreferences_username = getSharedPreferences("MyUsername",MODE_PRIVATE);
-        sharedPreferences_paassword = getSharedPreferences("MyPassword",MODE_PRIVATE );
+        sharedPreferences_credentials = getSharedPreferences("MyPassword" , MODE_PRIVATE);
 
         scoop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"plz enter username & password" , Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    saveUsernameData("username",username.getText().toString());
-                    savePasswordData("password" , password.getText().toString());
+                    Table table = new Table(username.getText().toString(),password.getText().toString());
+                    myDataBase = Room.databaseBuilder(getApplicationContext(),TableDataBase.class,"MyDataBse").allowMainThreadQueries().build();
+                    myDataBase.dao().insert(table);
+
+                    saveUsernameData("MyUsername",username.getText().toString());
+                    savePasswordData("MyPassword" , password.getText().toString());
                     Intent i = new Intent(getApplicationContext(),LogInHome.class);
                     startActivity(i);
                 }
@@ -61,29 +67,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
     @Override
     protected void onResume() {
 
-        String name = getDate("username");
+        String name = getData("username");
         username.setText(name);
         String password_shared = getPassword("password");
         password.setText(password_shared);
         super.onResume();
     }
 
+     */
+
     void saveUsernameData(String key , String value){
-        SharedPreferences.Editor editor = sharedPreferences_username.edit();
-    editor.putString(key, value);
-    editor.commit();
+        SharedPreferences.Editor editor = sharedPreferences_credentials.edit();
+        editor.putString(key, value);
+        editor.commit();
     }
 
-    String getDate(String key){
+    String getData(String key){
         String s ;
-        s = sharedPreferences_username.getString(key , " ");
+        s = sharedPreferences_credentials.getString(key , " ");
         return  s ;
     }
     void savePasswordData(String key , String value){
-        SharedPreferences.Editor password_prefrence = sharedPreferences_paassword.edit();
+        SharedPreferences.Editor password_prefrence = sharedPreferences_credentials.edit();
         password_prefrence.putString(key, value);
         password_prefrence.commit();
     }
@@ -91,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     String getPassword(String key){
 
         String s ;
-        s = sharedPreferences_paassword.getString(key , " ");
+        s = sharedPreferences_credentials.getString(key , " ");
         return s ;
     }
 }

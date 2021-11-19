@@ -18,30 +18,37 @@ public class setting_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_page);
+        bottomBar = findViewById(R.id.bottom_nav_bar_setting);
 
-        bottomBar.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+        bottomBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
 
+                if (R.id.bottom_profile_icon == item.getItemId()) {
 
-                switch (item.getItemId()){
-                    case R.id.bottom_profile_icon:
-                        Intent p = new Intent(getApplicationContext(), ProfilePage.class);
-                        startActivity(p);
-                        break;
+                    Intent p = new Intent(getApplicationContext(), ProfilePage.class);
+                    startActivity(p);
+                    finish();
 
-                    case R.id.bottom_home_icon:
-
-                        Intent h = new Intent(getApplicationContext(),LogInHome.class);
-                        startActivity(h);
-                        break;
-
-                    case R.id.bottom_setting_icon:
-                        Intent s = new Intent(getApplicationContext(),setting_page.class);
-                        startActivity(s);
-                        break;
                 }
+
+                if( R.id.bottom_home_icon == item.getItemId()){
+
+                    Intent h = new Intent(getApplicationContext(),LogInHome.class);
+                    startActivity(h);
+                    finish();
+                }
+
+
+
+                if( R.id.bottom_setting_icon == item.getItemId() ) {
+
+                    Intent s = new Intent(getApplicationContext(), setting_page.class);
+                    startActivity(s);
+                    finish();
+                }
+                return false;
             }
         });
     }

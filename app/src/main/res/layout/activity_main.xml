@@ -18,11 +18,11 @@
 
         android:gravity="center"
         android:hint="User Name"
-        android:textStyle="italic"
         android:inputType="textPersonName"
         android:padding="5dp"
         android:textColor="#190101"
         android:textColorHint="#A38E8E"
+        android:textStyle="italic"
 
         />
 

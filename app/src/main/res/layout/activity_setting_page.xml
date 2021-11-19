@@ -33,48 +33,17 @@
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:Hint="search any setting"
             />
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/profile_settings"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="@color/white"
-        app:cardCornerRadius="10dp"
-        >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:src="@drawable/profile_photo"
-
-            />
-
-        <TextView
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:text="Account"
-            android:layout_gravity="center"
-            android:textSize="22dp"
-            android:textColor="#353131"
-            android:gravity="center"
-            android:textStyle="bold|italic"
-            />
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/notification_settings"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:backgroundTint="@color/white"
@@ -200,7 +169,7 @@
         >
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav_bar"
+            android:id="@+id/bottom_nav_bar_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
